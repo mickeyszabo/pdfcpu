@@ -25,10 +25,6 @@ f=${1##*/}
 f1=${f%.*}
 out=$2
 
-#rm -drf $out/*
-
-#set -e
-
 mkdir $out/$f1
 cp $1 $out/$f1 
 

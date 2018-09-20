@@ -18,7 +18,7 @@
 
 if [ $# -ne 2 ]; then
     echo "usage: ./stampDir.sh inDir outDir"
-    echo "stamp files as Draft"
+    echo "stamp files as Draft with opacity 0.9"
     exit 1
 fi
 

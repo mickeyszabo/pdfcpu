@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# eg: ./extractPagesDir.sh ~/pdf/big ~/pdf/out
+# eg: ./extractMetadataDir.sh ~/pdf/big ~/pdf/out
 
 if [ $# -ne 2 ]; then
     echo "usage: ./extractMetadataDir.sh inDir outDir"

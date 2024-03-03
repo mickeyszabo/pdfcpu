@@ -26,7 +26,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-// ResizeFile applies resizeConf for selected pages of rs and writes result to w.
+// Resize applies resizeConf for selected pages of rs and writes result to w.
 func Resize(rs io.ReadSeeker, w io.Writer, selectedPages []string, resize *model.Resize, conf *model.Configuration) error {
 	if rs == nil {
 		return errors.New("pdfcpu: Resize: missing rs")

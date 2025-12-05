@@ -56,7 +56,7 @@
 		},
 		"left": "pdfcpu: %v\nCreated: %t",
 		"center": "Page %p of %P",
-		"right": "Source:\ntestdata/json/create/tables.json",
+		"right": "Source:\ntestdata/json/create/table.json",
 		"height": 30,
 		"dx": 5,
 		"dy": 5,

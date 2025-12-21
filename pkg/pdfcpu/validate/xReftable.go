@@ -275,7 +275,7 @@ func validatePageLabels(xRefTable *model.XRefTable, rootDict types.Dict, require
 		return err
 	}
 
-	_, _, err = validateNumberTree(xRefTable, "PageLabel", d, true)
+	_, _, err = validateNumberTree(xRefTable, "PageLabel", d, true, false)
 
 	return err
 }

@@ -409,12 +409,14 @@ func validateAnnotationDictFreeTextPart1(xRefTable *model.XRefTable, d types.Dic
 	}
 
 	// CL, optional, number array, since V1.6, len: 4 or 6
+	validateCL := func(a types.Array) bool { return len(a) == 4 || len(a) == 6 }
 	sinceVersion = model.V16
 	if xRefTable.ValidationMode == model.ValidationRelaxed {
 		sinceVersion = model.V14
+		validateCL = nil
 	}
 
-	_, err := validateNumberArrayEntry(xRefTable, d, dictName, "CL", OPTIONAL, sinceVersion, func(a types.Array) bool { return len(a) == 4 || len(a) == 6 })
+	_, err := validateNumberArrayEntry(xRefTable, d, dictName, "CL", OPTIONAL, sinceVersion, validateCL)
 
 	return err
 }

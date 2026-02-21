@@ -1660,7 +1660,7 @@ func validateAnnotationDictConcrete(xRefTable *model.XRefTable, d types.Dict, di
 		"Screen":         {validateAnnotationDictScreen, model.V15, model.V14, false},
 		"PrinterMark":    {validateAnnotationDictPrinterMark, model.V14, model.V14, false},
 		"TrapNet":        {validateAnnotationDictTrapNet, model.V13, model.V13, false},
-		"Watermark":      {validateAnnotationDictWatermark, model.V16, model.V16, false},
+		"Watermark":      {validateAnnotationDictWatermark, model.V16, model.V14, false},
 		"3D":             {validateAnnotationDict3D, model.V16, model.V16, false},
 		"Redact":         {validateAnnotationDictRedact, model.V17, model.V17, true},
 		"RichMedia":      {validateRichMediaAnnotation, model.V17, model.V14, false},
@@ -1672,7 +1672,7 @@ func validateAnnotationDictConcrete(xRefTable *model.XRefTable, d types.Dict, di
 				sinceVersion = v.sinceVersionRelaxed
 			}
 
-			err := xRefTable.ValidateVersion(k, sinceVersion)
+			err := xRefTable.ValidateVersion(k+" annotation", sinceVersion)
 			if err != nil {
 				return err
 			}
